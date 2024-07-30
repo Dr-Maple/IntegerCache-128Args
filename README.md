@@ -15,14 +15,13 @@ int是基本数据类型，integer是引用数据类型，是int的包装类。
 
 自动装箱的过程：引用了valueOf()的方法
 
- public static Integer valueOf(int i) {
-        assert IntegerCache.high >= 127;
-        if (i >= IntegerCache.low && i <= IntegerCache.high)
-            return IntegerCache.cache[i + (-IntegerCache.low)];
-        return new Integer(i);
-    }
-# assertion
-    就是在程序中的一条语句，它对一个boolean表达式进行检查，一个正确程序必须保证这个boolean表达式的值为true；如果该值为false，说明程序已经处于不正确的状态下，系统将给出警告并且退出。一般来说，assertion用于保证程序最基本、关键的正确性。
+   public static Integer valueOf(int i) {
+          assert IntegerCache.high >= 127;
+          if (i >= IntegerCache.low && i <= IntegerCache.high)
+              return IntegerCache.cache[i + (-IntegerCache.low)];
+          return new Integer(i);
+      }
+assertion就是在程序中的一条语句，它对一个boolean表达式进行检查，一个正确程序必须保证这个boolean表达式的值为true；如果该值为false，说明程序已经处于不正确的状态下，系统将给出警告并且退出。一般来说，assertion用于保证程序最基本、关键的正确性。
     java内部为了节省内存，IntegerCache类中有一个数组缓存了值从-128到127的Integer对象。当我们调用Integer.valueOf（int i）的时候，如果i的值时结余-128到127之间的，会直接从这个缓存中返回一个对象，否则就new一个新的Integer对象。
 
  
