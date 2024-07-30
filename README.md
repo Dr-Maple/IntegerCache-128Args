@@ -1,6 +1,6 @@
 # IntegerCache-128Args
 
-# Integer源码，为什么缓存范围在【-128—+127】？
+# Integer源码，为什么缓存范围在【-128—127】？
 
 public final class Integer extends Number implements Comparable<Integer>
  
