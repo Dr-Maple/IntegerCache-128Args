@@ -21,8 +21,7 @@ int是基本数据类型，integer是引用数据类型，是int的包装类。
               return IntegerCache.cache[i + (-IntegerCache.low)];
           return new Integer(i);
       }
- 
-    java内部为了节省内存，IntegerCache类中有一个数组缓存了值从-128到127的Integer对象。当我们调用Integer.valueOf（int i）的时候，如果i的值时结余-128到127之间的，会直接从这个缓存中返回一个对象，否则就new一个新的Integer对象。
+ java内部为了节省内存，IntegerCache类中有一个数组缓存了值从-128到127的Integer对象。当我们调用Integer.valueOf（int i）的时候，如果i的值时结余-128到127之间的，会直接从这个缓存中返回一个对象，否则就new一个新的Integer对象。
 
  
 
