@@ -65,5 +65,3 @@ IntegerCache是Integer的内部类，用来将-128——high之间的对象进�
 这边固定了缓存的下限，但是上限可以通过设置jdk的AutoBoxCacheMax参数调整，自动缓存区间设置为[-128,N]；
 
 IntegerCache 不会有实例，它是 private static class IntegerCache，在 Integer 中都是直接使用其 static 方法
-
-原文链接：https://blog.csdn.net/wang0112233/article/details/78641951
